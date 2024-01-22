@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="nemis.xsl"?>
+<!-- ***************************************************************************************************************
+* This XML metadata file conforms to the NSG Elevation Metadata Implementation Specification (NEMIS) in accordance 
+* with NGA's Digital Elevation Content Standardization Implementation Guidance (SIG), NGA.SIG.0033_1.0_ELEV.
+******************************************************************************************************************** -->
+<nas:MD_Metadata xmlns:nas="http://api.nsgreg.nga.mil/schema/nas/base18Dec"
+xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
+xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
+xmlns:swe="http://www.opengis.net/swe/2.0"
+xmlns:gml="http://www.opengis.net/gml/3.2"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:ism="urn:us:gov:ic:ism"
+xmlns:ntk="urn:us:gov:ic:ntk"
+xmlns:rr="urn:us:gov:ic:revrecall"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://api.nsgreg.nga.mil/schema/nas/base18Dec ./SFN/base18Dec/nasResourcePedigree.xsd"
+ism:DESVersion="13"
+ism:ISMCATCESVersion="13"
+ntk:DESVersion="10"
+rr:DESVersion="1"
+ism:resourceElement="true" ism:createDate="2020-03-15" ism:classification="U" ism:ownerProducer="USA" ism:compliesWith="USGov">
+	<mdb:metadataIdentifier>
+		<mcc:MD_Identifier>
+			<mcc:code>
+				<gco:CharacterString>U_6N500000e7240000n_20km_2000_ArcticPS_NGA_DSM_2m_01_meta.xml</gco:CharacterString>
+			</mcc:code>
+		</mcc:MD_Identifier>
+	</mdb:metadataIdentifier>
+	<mdb:defaultLocale>
+		<lan:PT_Locale>
+			<lan:language>
+				<lan:LanguageCode codeList="http://api.nsgreg.nga.mil/codelist/iso639-2" codeListValue="eng" />
+			</lan:language>
+			<lan:country>
+				<lan:CountryCode codeList="http://api.nsgreg.nga.mil/N2L?" codeListValue="ge:GENC:3:3-11:USA" />
+			</lan:country>
+			<lan:characterEncoding>
+				<lan:MD_CharacterSetCode codeList="http://api.nsgreg.nga.mil/codelist/IANACharset" codeListValue="UTF-8" />
+			</lan:characterEncoding>
+		</lan:PT_Locale>
+	</mdb:defaultLocale>
+	<mdb:metadataScope>
+		<mdb:MD_MetadataScope>
+			<mdb:resourceScope>
+				<mcc:MD_ScopeCode codeList="http://api.nsgreg.nga.mil/codelist/ScopeCode" codeListValue="dataset" />
+			</mdb:resourceScope>
+			<mdb:name>
+				<gco:CharacterString>tile</gco:CharacterString>
+			</mdb:name>
+		</mdb:MD_MetadataScope>
+	</mdb:metadataScope>
+	<mdb:contact>
+		<cit:CI_Responsibility>
+			<cit:role>
+				<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="pointOfContact" />
+			</cit:role>
+			<cit:party>
+				<cit:CI_Organisation id="NgaOfficeOfGeomatics">
+					<cit:name>
+						<gco:CharacterString>National Geospatial-Intelligence Agency (NGA)</gco:CharacterString>
+					</cit:name>
+					<cit:contactInfo>
+						<cit:CI_Contact>
+							<cit:phone>
+								<cit:CI_Telephone>
+									<cit:number>
+										<gco:CharacterString>+13146769146</gco:CharacterString>
+									</cit:number>
+								</cit:CI_Telephone>
+							</cit:phone>
+							<cit:address>
+								<cit:CI_Address>
+									<cit:deliveryPoint>
+										<gco:CharacterString>3838 Vogel Road</gco:CharacterString>
+									</cit:deliveryPoint>
+									<cit:deliveryPoint>
+										<gco:CharacterString>Mail Stop L-041</gco:CharacterString>
+									</cit:deliveryPoint>
+									<cit:city>
+										<gco:CharacterString>Arnold</gco:CharacterString>
+									</cit:city>
+									<cit:administrativeArea>
+										<gco:CharacterString>MO</gco:CharacterString>
+									</cit:administrativeArea>
+									<cit:postalCode>
+										<gco:CharacterString>63010</gco:CharacterString>
+									</cit:postalCode>
+									<cit:country>
+										<gco:CharacterString>USA</gco:CharacterString>
+									</cit:country>
+									<cit:electronicMailAddress>
+										<gco:CharacterString>terrain@nga.mil</gco:CharacterString>
+									</cit:electronicMailAddress>
+								</cit:CI_Address>
+							</cit:address>
+							<cit:onlineResource>
+								<cit:CI_OnlineResource>
+									<cit:linkage>
+										<gco:CharacterString>http://earth-info.nga.mil/GandG/</gco:CharacterString>
+									</cit:linkage>
+								</cit:CI_OnlineResource>
+							</cit:onlineResource>
+						</cit:CI_Contact>
+					</cit:contactInfo>
+					<cit:individual>
+						<cit:CI_Individual>
+							<cit:name>
+								<gco:CharacterString>Office of Geomatics</gco:CharacterString>
+							</cit:name>
+						</cit:CI_Individual>
+					</cit:individual>
+				</cit:CI_Organisation>
+			</cit:party>
+		</cit:CI_Responsibility>
+	</mdb:contact>
+	<mdb:dateInfo>
+		<cit:CI_Date>
+			<cit:date>
+				<gco:DateTime>2020-03-15T13:19:04Z</gco:DateTime>
+			</cit:date>
+			<cit:dateType>
+				<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="creation" />
+			</cit:dateType>
+		</cit:CI_Date>
+	</mdb:dateInfo>
+	<mdb:metadataStandard>
+		<cit:CI_Citation>
+			<cit:title>
+				<gco:CharacterString>NSG Elevation Metadata Implementation Specification (NEMIS)</gco:CharacterString>
+			</cit:title>
+			<cit:alternateTitle>
+				<gco:CharacterString>NEMIS</gco:CharacterString>
+			</cit:alternateTitle>
+			<cit:date>
+				<cit:CI_Date>
+					<cit:date>
+						<gco:DateTime>2019-08-22T00:00:00Z</gco:DateTime>
+					</cit:date>
+					<cit:dateType>
+						<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="publication" />
+					</cit:dateType>
+				</cit:CI_Date>
+			</cit:date>
+			<cit:edition>
+				<gco:CharacterString>1.0</gco:CharacterString>
+			</cit:edition>
+			<cit:citedResponsibleParty>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="publisher" />
+					</cit:role>
+					<cit:party xlink:href="#NgaOfficeOfGeomatics" />
+				</cit:CI_Responsibility>
+			</cit:citedResponsibleParty>
+			<cit:onlineResource>
+				<cit:CI_OnlineResource>
+					<cit:linkage>
+						<gco:CharacterString>https://nsgreg.nga.mil/doc/view?i=4751</gco:CharacterString>
+					</cit:linkage>
+				</cit:CI_OnlineResource>
+			</cit:onlineResource>
+		</cit:CI_Citation>
+	</mdb:metadataStandard>
+	<mdb:spatialRepresentationInfo>
+		<msr:MD_GridSpatialRepresentation>
+			<msr:numberOfDimensions>
+				<gco:Integer>2</gco:Integer>
+			</msr:numberOfDimensions>
+			<msr:axisDimensionProperties>
+				<msr:MD_Dimension>
+					<msr:dimensionName>
+						<msr:MD_DimensionNameTypeCode codeList="./RESOURCES/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_DimensionNameTypeCode" codeListValue="row" />
+					</msr:dimensionName>
+					<msr:dimensionSize>
+						<gco:Integer>10001</gco:Integer>
+					</msr:dimensionSize>
+					<msr:resolution>
+						<gco:Measure uom="http://api.nsgreg.nga.mil/physical-quantity/length/metre">2</gco:Measure>
+					</msr:resolution>
+				</msr:MD_Dimension>
+			</msr:axisDimensionProperties>
+			<msr:axisDimensionProperties>
+				<msr:MD_Dimension>
+					<msr:dimensionName>
+						<msr:MD_DimensionNameTypeCode codeList="./RESOURCES/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_DimensionNameTypeCode" codeListValue="column" />
+					</msr:dimensionName>
+					<msr:dimensionSize>
+						<gco:Integer>10001</gco:Integer>
+					</msr:dimensionSize>
+					<msr:resolution>
+						<gco:Measure uom="http://api.nsgreg.nga.mil/physical-quantity/length/metre">2</gco:Measure>
+					</msr:resolution>
+				</msr:MD_Dimension>
+			</msr:axisDimensionProperties>
+			<msr:cellGeometry>
+				<msr:MD_CellGeometryCode codeList="http://api.nsgreg.nga.mil/codelist/CellGeometryCode" codeListValue="point" />
+			</msr:cellGeometry>
+			<msr:transformationParameterAvailability>
+				<gco:Boolean>true</gco:Boolean>
+			</msr:transformationParameterAvailability>
+		</msr:MD_GridSpatialRepresentation>
+	</mdb:spatialRepresentationInfo>
+	<mdb:referenceSystemInfo>
+		<mrs:MD_ReferenceSystem>
+			<mrs:referenceSystemIdentifier>
+				<mcc:MD_Identifier>
+					<mcc:code>
+						<gco:CharacterString>32606</gco:CharacterString>
+					</mcc:code>
+					<mcc:codeSpace>
+						<gco:CharacterString>epsg</gco:CharacterString>
+					</mcc:codeSpace>
+					<mcc:description>
+						<gco:CharacterString>WGS 84 / UTM zone 6N</gco:CharacterString>
+					</mcc:description>
+				</mcc:MD_Identifier>
+			</mrs:referenceSystemIdentifier>
+			<mrs:referenceSystemType>
+				<mrs:MD_ReferenceSystemTypeCode codeList="http://api.nsgreg.nga.mil/codelist/ReferenceSystemTypeCode" codeListValue="projected" />
+			</mrs:referenceSystemType>
+		</mrs:MD_ReferenceSystem>
+	</mdb:referenceSystemInfo>
+	<mdb:referenceSystemInfo>
+		<mrs:MD_ReferenceSystem>
+			<mrs:referenceSystemIdentifier>
+				<mcc:MD_Identifier>
+					<mcc:code>
+						<gco:CharacterString>3855</gco:CharacterString>
+					</mcc:code>
+					<mcc:codeSpace>
+						<gco:CharacterString>epsg</gco:CharacterString>
+					</mcc:codeSpace>
+					<mcc:description>
+						<gco:CharacterString>EGM2008 height</gco:CharacterString>
+					</mcc:description>
+				</mcc:MD_Identifier>
+			</mrs:referenceSystemIdentifier>
+			<mrs:referenceSystemType>
+				<mrs:MD_ReferenceSystemTypeCode codeList="http://api.nsgreg.nga.mil/codelist/ReferenceSystemTypeCode" codeListValue="vertical" />
+			</mrs:referenceSystemType>
+		</mrs:MD_ReferenceSystem>
+	</mdb:referenceSystemInfo>
+	<mdb:identificationInfo>
+		<nas:DataIdentification>
+			<mri:citation>
+				<cit:CI_Citation>
+					<cit:title>
+						<gco:CharacterString>Level 5 DGED UTM Alaska UTM 6N500000e7240000n</gco:CharacterString>
+					</cit:title>
+					<cit:alternateTitle>
+						<gco:CharacterString>DGED (Defense Gridded Elevation Data) Version 1.2</gco:CharacterString>
+					</cit:alternateTitle>
+					<cit:date>
+						<cit:CI_Date>
+							<cit:date>
+								<gco:DateTime>2020-03-15T13:19:04Z</gco:DateTime>
+							</cit:date>
+							<cit:dateType>
+								<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="publication" />
+							</cit:dateType>
+						</cit:CI_Date>
+					</cit:date>
+					<cit:edition>
+						<gco:CharacterString>1.0</gco:CharacterString>
+					</cit:edition>
+					<cit:identifier>
+						<mcc:MD_Identifier>
+							<mcc:code>
+								<gco:CharacterString>U_6N500000e7240000n_20km_2000_ArcticPS_NGA_DSM_2m_01</gco:CharacterString>
+							</mcc:code>
+						</mcc:MD_Identifier>
+					</cit:identifier>
+					<cit:series>
+						<cit:CI_Series>
+							<cit:name>
+								<gco:CharacterString>Level 5 DGED UTM Alaska</gco:CharacterString>
+							</cit:name>
+						</cit:CI_Series>
+					</cit:series>
+					<cit:onlineResource>
+						<cit:CI_OnlineResource>
+							<cit:linkage>
+								<gco:CharacterString>./DEM/U_6N500000e7240000n_20km_2000_ArcticPS_NGA_DSM_2m_01.tif</gco:CharacterString>
+							</cit:linkage>
+						</cit:CI_OnlineResource>
+					</cit:onlineResource>
+				</cit:CI_Citation>
+			</mri:citation>
+			<mri:abstract>
+				<gco:CharacterString>This is a National Geospatial-Intelligence Agency (NGA) dataset, produced with support of the Arctic GeoData Cooperative. The cooperative is a Department of Defense mission-driven collaboration between industry, academia, and the US Government to enable access to current, accurate, and authoritative geospatial data for the Arctic. The NGA Arctic Dynamic Elevation Model combines unclassified datasets into aggregated, best-available, digital elevation models. Input datasets are mosaicked into seamless and void-free products formatted to support NGA customers. Please direct questions regarding this dataset or the Arctic Dynamic Elevation Model to the NGA Office of Geomatics at terrain@nga.mil.</gco:CharacterString>
+			</mri:abstract>
+			<mri:purpose>
+				<gco:CharacterString>This dataset provides foundational elevation GEOINT to enhance Arctic awareness and enable Arctic operations.</gco:CharacterString>
+			</mri:purpose>
+			<mri:status>
+				<mcc:MD_ProgressCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_ProgressCode" codeListValue="completed" />
+			</mri:status>
+			<mri:pointOfContact>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="pointOfContact" />
+					</cit:role>
+					<cit:party xlink:href="#NgaOfficeOfGeomatics" />
+				</cit:CI_Responsibility>
+			</mri:pointOfContact>
+			<mri:pointOfContact>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="originator" />
+					</cit:role>
+					<cit:party xlink:href="#NgaOfficeOfGeomatics" />
+				</cit:CI_Responsibility>
+			</mri:pointOfContact>
+			<mri:pointOfContact>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="editor" />
+					</cit:role>
+					<cit:party>
+						<cit:CI_Organisation id="GeoNorth">
+							<cit:name>
+								<gco:CharacterString>GeoNorth Information Systems</gco:CharacterString>
+							</cit:name>
+							<cit:contactInfo>
+								<cit:CI_Contact>
+									<cit:phone>
+										<cit:CI_Telephone>
+											<cit:number>
+												<gco:CharacterString>+19072784000</gco:CharacterString>
+											</cit:number>
+										</cit:CI_Telephone>
+									</cit:phone>
+									<cit:address>
+										<cit:CI_Address>
+											<cit:deliveryPoint>
+												<gco:CharacterString>561 East 36th Ave. Suite 400</gco:CharacterString>
+											</cit:deliveryPoint>
+											<cit:city>
+												<gco:CharacterString>Anchorage</gco:CharacterString>
+											</cit:city>
+											<cit:administrativeArea>
+												<gco:CharacterString>AK</gco:CharacterString>
+											</cit:administrativeArea>
+											<cit:postalCode>
+												<gco:CharacterString>99503</gco:CharacterString>
+											</cit:postalCode>
+											<cit:country>
+												<gco:CharacterString>USA</gco:CharacterString>
+											</cit:country>
+											<cit:electronicMailAddress>
+												<gco:CharacterString>support@geonorthis.com</gco:CharacterString>
+											</cit:electronicMailAddress>
+										</cit:CI_Address>
+									</cit:address>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>www.geonorthis.com</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Contact>
+							</cit:contactInfo>
+						</cit:CI_Organisation>
+					</cit:party>
+				</cit:CI_Responsibility>
+			</mri:pointOfContact>
+			<mri:pointOfContact>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="contributor" />
+					</cit:role>
+					<cit:party>
+						<cit:CI_Organisation id="PGC">
+							<cit:name>
+								<gco:CharacterString>Polar Geospatial Center (PGC)</gco:CharacterString>
+							</cit:name>
+							<cit:contactInfo>
+								<cit:CI_Contact>
+									<cit:phone>
+										<cit:CI_Telephone>
+											<cit:number>
+												<gco:CharacterString>+16126260505</gco:CharacterString>
+											</cit:number>
+										</cit:CI_Telephone>
+									</cit:phone>
+									<cit:address>
+										<cit:CI_Address>
+											<cit:deliveryPoint>
+												<gco:CharacterString>R280 Learning and Environmental Sciences</gco:CharacterString>
+											</cit:deliveryPoint>
+											<cit:deliveryPoint>
+												<gco:CharacterString>1954 Buford Avenue</gco:CharacterString>
+											</cit:deliveryPoint>
+											<cit:city>
+												<gco:CharacterString>Saint Paul</gco:CharacterString>
+											</cit:city>
+											<cit:administrativeArea>
+												<gco:CharacterString>MN</gco:CharacterString>
+											</cit:administrativeArea>
+											<cit:postalCode>
+												<gco:CharacterString>55108</gco:CharacterString>
+											</cit:postalCode>
+											<cit:country>
+												<gco:CharacterString>USA</gco:CharacterString>
+											</cit:country>
+											<cit:electronicMailAddress>
+												<gco:CharacterString>pgc@umn.edu</gco:CharacterString>
+											</cit:electronicMailAddress>
+										</cit:CI_Address>
+									</cit:address>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>https://www.pgc.umn.edu/</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Contact>
+							</cit:contactInfo>
+						</cit:CI_Organisation>
+					</cit:party>
+				</cit:CI_Responsibility>
+			</mri:pointOfContact>
+			<mri:pointOfContact>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="contributor" />
+					</cit:role>
+					<cit:party>
+						<cit:CI_Organisation id="USGS">
+							<cit:name>
+								<gco:CharacterString>United States Geological Survey (USGS)</gco:CharacterString>
+							</cit:name>
+							<cit:contactInfo>
+								<cit:CI_Contact>
+									<cit:phone>
+										<cit:CI_Telephone>
+											<cit:number>
+												<gco:CharacterString>+18882758747</gco:CharacterString>
+											</cit:number>
+										</cit:CI_Telephone>
+									</cit:phone>
+									<cit:address>
+										<cit:CI_Address>
+											<cit:deliveryPoint>
+												<gco:CharacterString>12201 Sunrise Valley Rd</gco:CharacterString>
+											</cit:deliveryPoint>
+											<cit:city>
+												<gco:CharacterString>Reston</gco:CharacterString>
+											</cit:city>
+											<cit:administrativeArea>
+												<gco:CharacterString>VA</gco:CharacterString>
+											</cit:administrativeArea>
+											<cit:postalCode>
+												<gco:CharacterString>20192</gco:CharacterString>
+											</cit:postalCode>
+											<cit:country>
+												<gco:CharacterString>USA</gco:CharacterString>
+											</cit:country>
+										</cit:CI_Address>
+									</cit:address>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.usgs.gov/</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Contact>
+							</cit:contactInfo>
+						</cit:CI_Organisation>
+					</cit:party>
+				</cit:CI_Responsibility>
+			</mri:pointOfContact>
+			<mri:pointOfContact>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="contributor" />
+					</cit:role>
+					<cit:party>
+						<cit:CI_Organisation id="BGIC">
+							<cit:name>
+								<gco:CharacterString>Bundeswehr Geoinformation Centre (BGIC)</gco:CharacterString>
+							</cit:name>
+							<cit:contactInfo>
+								<cit:CI_Contact>
+									<cit:phone>
+										<cit:CI_Telephone>
+											<cit:number>
+												<gco:CharacterString>+49-2251-953-4444</gco:CharacterString>
+											</cit:number>
+										</cit:CI_Telephone>
+									</cit:phone>
+									<cit:address>
+										<cit:CI_Address>
+											<cit:deliveryPoint>
+												<gco:CharacterString>Frauenberger Strasse 250</gco:CharacterString>
+											</cit:deliveryPoint>
+											<cit:city>
+												<gco:CharacterString>Euskirchen</gco:CharacterString>
+											</cit:city>
+											<cit:administrativeArea>
+												<gco:CharacterString>North Rhine-Westphalia</gco:CharacterString>
+											</cit:administrativeArea>
+											<cit:postalCode>
+												<gco:CharacterString>53879</gco:CharacterString>
+											</cit:postalCode>
+											<cit:country>
+												<gco:CharacterString>DE</gco:CharacterString>
+											</cit:country>
+											<cit:electronicMailAddress>
+												<gco:CharacterString>zgeobwtandemx@bundeswehr.org</gco:CharacterString>
+											</cit:electronicMailAddress>
+										</cit:CI_Address>
+									</cit:address>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.kommando.streitkraeftebasis.de/</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Contact>
+							</cit:contactInfo>
+							<cit:individual>
+								<cit:CI_Individual>
+									<cit:name>
+										<gco:CharacterString>BGIC TanDEM-X Working Group</gco:CharacterString>
+									</cit:name>
+								</cit:CI_Individual>
+							</cit:individual>
+						</cit:CI_Organisation>
+					</cit:party>
+				</cit:CI_Responsibility>
+			</mri:pointOfContact>
+			<mri:pointOfContact>
+				<cit:CI_Responsibility>
+					<cit:role>
+						<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="contributor" />
+					</cit:role>
+					<cit:party>
+						<cit:CI_Organisation id="Airbus">
+							<cit:name>
+								<gco:CharacterString>Airbus DS Geo GmbH</gco:CharacterString>
+							</cit:name>
+							<cit:contactInfo>
+								<cit:CI_Contact>
+									<cit:phone>
+										<cit:CI_Telephone>
+											<cit:number>
+												<gco:CharacterString>+49-7545-8-4344</gco:CharacterString>
+											</cit:number>
+										</cit:CI_Telephone>
+									</cit:phone>
+									<cit:address>
+										<cit:CI_Address>
+											<cit:deliveryPoint>
+												<gco:CharacterString>Claude-Dornier-Strasse</gco:CharacterString>
+											</cit:deliveryPoint>
+											<cit:city>
+												<gco:CharacterString>Immenstaad</gco:CharacterString>
+											</cit:city>
+											<cit:administrativeArea>
+												<gco:CharacterString>Baden-Wuerttemberg</gco:CharacterString>
+											</cit:administrativeArea>
+											<cit:postalCode>
+												<gco:CharacterString>88090</gco:CharacterString>
+											</cit:postalCode>
+											<cit:country>
+												<gco:CharacterString>DE</gco:CharacterString>
+											</cit:country>
+											<cit:electronicMailAddress>
+												<gco:CharacterString>worlddem@geo-airbusds.com</gco:CharacterString>
+											</cit:electronicMailAddress>
+										</cit:CI_Address>
+									</cit:address>
+									<cit:onlineResource>
+										<cit:CI_OnlineResource>
+											<cit:linkage>
+												<gco:CharacterString>http://www.geo-airbusds.com/</gco:CharacterString>
+											</cit:linkage>
+										</cit:CI_OnlineResource>
+									</cit:onlineResource>
+								</cit:CI_Contact>
+							</cit:contactInfo>
+							<cit:individual>
+								<cit:CI_Individual>
+									<cit:name>
+										<gco:CharacterString>Customer Service</gco:CharacterString>
+									</cit:name>
+								</cit:CI_Individual>
+							</cit:individual>
+						</cit:CI_Organisation>
+					</cit:party>
+				</cit:CI_Responsibility>
+			</mri:pointOfContact>
+			<mri:spatialRepresentationType>
+				<mcc:MD_SpatialRepresentationTypeCode codeList="http://api.nsgreg.nga.mil/codelist/SpatialRepresentationTypeCode" codeListValue="grid" />
+			</mri:spatialRepresentationType>
+			<mri:spatialResolution>
+				<mri:MD_Resolution>
+					<mri:distance>
+						<gco:Distance uom="http://api.nsgreg.nga.mil/physical-quantity/length/metre">2</gco:Distance>
+					</mri:distance>
+				</mri:MD_Resolution>
+			</mri:spatialResolution>
+			<mri:topicCategory>
+				<mri:MD_TopicCategoryCode>elevation</mri:MD_TopicCategoryCode>
+			</mri:topicCategory>
+			<mri:extent>
+				<gex:EX_Extent>
+					<gex:geographicElement>
+						<gex:EX_GeographicBoundingBox>
+							<gex:westBoundLongitude>
+								<gco:Decimal>-147.00000000</gco:Decimal>
+							</gex:westBoundLongitude>
+							<gex:eastBoundLongitude>
+								<gco:Decimal>-146.56841290</gco:Decimal>
+							</gex:eastBoundLongitude>
+							<gex:southBoundLatitude>
+								<gco:Decimal>65.28243536</gco:Decimal>
+							</gex:southBoundLatitude>
+							<gex:northBoundLatitude>
+								<gco:Decimal>65.46249202</gco:Decimal>
+							</gex:northBoundLatitude>
+						</gex:EX_GeographicBoundingBox>
+					</gex:geographicElement>
+					<gex:geographicElement>
+						<gex:EX_BoundingPolygon>
+							<gex:polygon>
+								<gml:Polygon gml:id="DetailedPolygon" srsName="https://api.nsgreg.nga.mil/coord-ref-system/WGS84E_UTM06N">
+									<gml:exterior>
+										<gml:LinearRing>
+											<gml:pos>500000.00 7260000.00</gml:pos>
+											<gml:pos>520000.00 7260000.00</gml:pos>
+											<gml:pos>520000.00 7240000.00</gml:pos>
+											<gml:pos>500000.00 7240000.00</gml:pos>
+											<gml:pos>500000.00 7260000.00</gml:pos>
+										</gml:LinearRing>
+									</gml:exterior>
+								</gml:Polygon>
+							</gex:polygon>
+						</gex:EX_BoundingPolygon>
+					</gex:geographicElement>
+					<gex:temporalElement>
+						<gex:EX_TemporalExtent>
+							<gex:extent>
+								<gml:TimePeriod gml:id="SourceTemporalExtent">
+									<gml:begin>
+										<gml:TimeInstant gml:id="FirstImageDate">
+											<gml:timePosition>2000-02-11T00:00:00Z</gml:timePosition>
+										</gml:TimeInstant>
+									</gml:begin>
+									<gml:end>
+										<gml:TimeInstant gml:id="LastImageDate">
+											<gml:timePosition>2020-01-29T00:00:00Z</gml:timePosition>
+										</gml:TimeInstant>
+									</gml:end>
+								</gml:TimePeriod>
+							</gex:extent>
+						</gex:EX_TemporalExtent>
+					</gex:temporalElement>
+					<gex:verticalElement>
+						<gex:EX_VerticalExtent>
+							<gex:minimumValue>
+								<gco:Real>379.9507</gco:Real>
+							</gex:minimumValue>
+							<gex:maximumValue>
+								<gco:Real>1441.5425</gco:Real>
+							</gex:maximumValue>
+							<gex:verticalCRS xlink:href="http://api.nsgreg.nga.mil/coord-ref-system/EGM08_H" />
+						</gex:EX_VerticalExtent>
+					</gex:verticalElement>
+				</gex:EX_Extent>
+			</mri:extent>
+			<mri:resourceMaintenance>
+				<mmi:MD_MaintenanceInformation>
+					<mmi:maintenanceAndUpdateFrequency>
+						<mmi:MD_MaintenanceFrequencyCode codeList="http://api.nsgreg.nga.mil/codelist/maintenanceFrequencyCode" codeListValue="unknown" />
+					</mmi:maintenanceAndUpdateFrequency>
+					<mmi:contact>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="custodian" />
+							</cit:role>
+							<cit:party xlink:href="#NgaOfficeOfGeomatics" />
+						</cit:CI_Responsibility>
+					</mmi:contact>
+				</mmi:MD_MaintenanceInformation>
+			</mri:resourceMaintenance>
+			<mri:graphicOverview>
+				<mcc:MD_BrowseGraphic>
+					<mcc:fileName>
+						<gco:CharacterString>U_6N500000e7240000n_20km_2000_ArcticPS_NGA_DSO_2m_01.jpg</gco:CharacterString>
+					</mcc:fileName>
+					<mcc:fileDescription>
+						<gco:CharacterString>Thumbnail JPG image</gco:CharacterString>
+					</mcc:fileDescription>
+					<mcc:fileType>
+						<gco:CharacterString>JPEG</gco:CharacterString>
+					</mcc:fileType>
+					<mcc:linkage>
+						<cit:CI_OnlineResource>
+							<cit:linkage>
+								<gco:CharacterString>./PREVIEW/U_6N500000e7240000n_20km_2000_ArcticPS_NGA_DSO_2m_01.jpg</gco:CharacterString>
+							</cit:linkage>
+						</cit:CI_OnlineResource>
+					</mcc:linkage>
+				</mcc:MD_BrowseGraphic>
+			</mri:graphicOverview>
+			<mri:descriptiveKeywords>
+				<mri:MD_Keywords>
+					<mri:keyword>
+						<gco:CharacterString>GeoNorth</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>DGED</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>digital elevation model</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>DEM</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>elevation</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>surface</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>reflective</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>DSM</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>georectified</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>L5</gco:CharacterString>
+					</mri:keyword>
+					<mri:keyword>
+						<gco:CharacterString>high resolution</gco:CharacterString>
+					</mri:keyword>
+					<mri:type>
+						<mri:MD_KeywordTypeCode codeList="http://api.nsgreg.nga.mil/codelist/KeywordTypeCode" codeListValue="theme" />
+					</mri:type>
+					<mri:thesaurusName>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>NSG Elevation Thesaurus v1.0</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:DateTime>2020-01-01T00:00:00Z</gco:DateTime>
+									</cit:date>
+									<cit:dateType>
+										<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="publication" />
+									</cit:dateType>
+								</cit:CI_Date>
+							</cit:date>
+						</cit:CI_Citation>
+					</mri:thesaurusName>
+				</mri:MD_Keywords>
+			</mri:descriptiveKeywords>
+			<mri:resourceConstraints>
+				<nas:ResourceConstraints ism:classification="U" ism:ownerProducer="USA" ism:nonICmarkings="SBU">
+					<nas:notice ism:classification="U" ism:ownerProducer="USA" ism:noticeDate="2010-09-21" ism:noticeReason="This data was prepared for US DoD">
+						<ism:NoticeText ism:classification="U" ism:ownerProducer="USA">This dataset is restricted to Government Purpose Rights. A Government purpose is any activity in which the United States Government is a party, including cooperative agreements with international or multi-national defense organizations, or sales or transfers by the United States Government to foreign governments or international organizations. Government purposes include competitive procurement, but do not include the rights to use, modify, reproduce, release, perform, display, or disclose technical data for commercial purposes or authorize others to do so. Users have rights to use, modify, reproduce, release, perform, display, or disclose data within the US Government without restriction. Users have rights to release or disclose data outside the US Government and authorize persons to whom release or disclosure has been made to use, modify, reproduce, release, perform, display, or disclose that data for US Government purposes.</ism:NoticeText>
+					</nas:notice>
+				</nas:ResourceConstraints>
+			</mri:resourceConstraints>
+			<mri:resourceConstraints>
+				<mco:MD_LegalConstraints>
+					<mco:accessConstraints>
+						<mco:MD_RestrictionCode codeList="http://api.nsgreg.nga.mil/codelist/RestrictionCode" codeListValue="license" />
+					</mco:accessConstraints>
+					<mco:useConstraints>
+						<mco:MD_RestrictionCode codeList="http://api.nsgreg.nga.mil/codelist/RestrictionCode" codeListValue="restricted" />
+					</mco:useConstraints>
+				</mco:MD_LegalConstraints>
+			</mri:resourceConstraints>
+			<mri:defaultLocale>
+				<lan:PT_Locale>
+					<lan:language>
+						<lan:LanguageCode codeList="http://api.nsgreg.nga.mil/codelist/iso639-2" codeListValue="eng" />
+					</lan:language>
+					<lan:country>
+						<lan:CountryCode codeList="http://api.nsgreg.nga.mil/N2L?" codeListValue="ge:GENC:3:3-11:USA" />
+					</lan:country>
+					<lan:characterEncoding>
+						<lan:MD_CharacterSetCode codeList="http://api.nsgreg.nga.mil/codelist/IANACharset" codeListValue="UTF-8" />
+					</lan:characterEncoding>
+				</lan:PT_Locale>
+			</mri:defaultLocale>
+			<nas:resourceCategory codeSpace="http://api.nsgreg.nga.mil/codelist/ResourceCategoryCode">elevation</nas:resourceCategory>
+			<nas:electronicRecordsManagement>
+				<nas:ElectronicRecordsManagement gml:id="ERM_901">
+					<nas:officeOfRecord>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="owner" />
+							</cit:role>
+							<cit:party xlink:href="#NgaOfficeOfGeomatics" />
+						</cit:CI_Responsibility>
+					</nas:officeOfRecord>
+					<nas:disposition>
+						<nas:RecordDisposition gml:id="ERM_901_201604">
+							<nas:recDispDateApplied>2019-05-23T00:00:00Z</nas:recDispDateApplied>
+							<nas:reviewIndicator>false</nas:reviewIndicator>
+						</nas:RecordDisposition>
+					</nas:disposition>
+				</nas:ElectronicRecordsManagement>
+			</nas:electronicRecordsManagement>
+		</nas:DataIdentification>
+	</mdb:identificationInfo>
+	<mdb:distributionInfo>
+		<mrd:MD_Distribution>
+			<mrd:description>
+				<gco:CharacterString>32-bit floating point</gco:CharacterString>
+			</mrd:description>
+			<mrd:distributionFormat>
+				<mrd:MD_Format>
+					<mrd:formatSpecificationCitation>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>GeoTIFF</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:DateTime>2019-09-26T00:00:00Z</gco:DateTime>
+									</cit:date>
+									<cit:dateType>
+										<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="publication" />
+									</cit:dateType>
+								</cit:CI_Date>
+							</cit:date>
+							<cit:edition>
+								<gco:CharacterString>1.1</gco:CharacterString>
+							</cit:edition>
+							<cit:onlineResource>
+								<cit:CI_OnlineResource>
+									<cit:linkage>
+										<gco:CharacterString>https://www.opengeospatial.org/standards/geotiff</gco:CharacterString>
+									</cit:linkage>
+								</cit:CI_OnlineResource>
+							</cit:onlineResource>
+						</cit:CI_Citation>
+					</mrd:formatSpecificationCitation>
+				</mrd:MD_Format>
+			</mrd:distributionFormat>
+			<mrd:distributor>
+				<mrd:MD_Distributor>
+					<mrd:distributorContact>
+						<cit:CI_Responsibility>
+							<cit:role>
+								<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="distributor" />
+							</cit:role>
+							<cit:party>
+								<cit:CI_Organisation id="NgaGridCoreTeam">
+									<cit:name>
+										<gco:CharacterString>National Geospatial-Intelligence Agency (NGA)</gco:CharacterString>
+									</cit:name>
+									<cit:contactInfo>
+										<cit:CI_Contact>
+											<cit:phone>
+												<cit:CI_Telephone>
+													<cit:number>
+														<gco:CharacterString>+15715572300</gco:CharacterString>
+													</cit:number>
+												</cit:CI_Telephone>
+											</cit:phone>
+											<cit:address>
+												<cit:CI_Address>
+													<cit:deliveryPoint>
+														<gco:CharacterString>7901 Telegraph Road</gco:CharacterString>
+													</cit:deliveryPoint>
+													<cit:deliveryPoint>
+														<gco:CharacterString>PRRQ+7J Fort Belvoir</gco:CharacterString>
+													</cit:deliveryPoint>
+													<cit:city>
+														<gco:CharacterString>Mt Vernon</gco:CharacterString>
+													</cit:city>
+													<cit:administrativeArea>
+														<gco:CharacterString>VA</gco:CharacterString>
+													</cit:administrativeArea>
+													<cit:postalCode>
+														<gco:CharacterString>22060</gco:CharacterString>
+													</cit:postalCode>
+													<cit:country>
+														<gco:CharacterString>USA</gco:CharacterString>
+													</cit:country>
+													<cit:electronicMailAddress>
+														<gco:CharacterString>GRiD.core.team@erdc.dren.mil</gco:CharacterString>
+													</cit:electronicMailAddress>
+												</cit:CI_Address>
+											</cit:address>
+											<cit:onlineResource>
+												<cit:CI_OnlineResource>
+													<cit:linkage>
+														<gco:CharacterString>https://rsgis.erdc.dren.mil/griduc/help/contact/</gco:CharacterString>
+													</cit:linkage>
+												</cit:CI_OnlineResource>
+											</cit:onlineResource>
+										</cit:CI_Contact>
+									</cit:contactInfo>
+									<cit:individual>
+										<cit:CI_Individual>
+											<cit:name>
+												<gco:CharacterString>GRiD Core Team</gco:CharacterString>
+											</cit:name>
+										</cit:CI_Individual>
+									</cit:individual>
+								</cit:CI_Organisation>
+							</cit:party>
+						</cit:CI_Responsibility>
+					</mrd:distributorContact>
+				</mrd:MD_Distributor>
+			</mrd:distributor>
+			<mrd:transferOptions>
+				<mrd:MD_DigitalTransferOptions>
+					<mrd:unitsOfDistribution>
+						<gco:CharacterString>MB</gco:CharacterString>
+					</mrd:unitsOfDistribution>
+					<mrd:transferSize>
+						<gco:Real>266.7683</gco:Real>
+					</mrd:transferSize>
+				</mrd:MD_DigitalTransferOptions>
+			</mrd:transferOptions>
+		</mrd:MD_Distribution>
+	</mdb:distributionInfo>
+	<mdb:dataQualityInfo>
+		<mdq:DQ_DataQuality>
+			<mdq:scope>
+				<mcc:MD_Scope>
+					<mcc:level>
+						<mcc:MD_ScopeCode codeList="http://api.nsgreg.nga.mil/codelist/ScopeCode" codeListValue="dataset" />
+					</mcc:level>
+					<mcc:levelDescription>
+						<mcc:MD_ScopeDescription>
+							<mcc:other>
+								<gco:CharacterString>tile</gco:CharacterString>
+							</mcc:other>
+						</mcc:MD_ScopeDescription>
+					</mcc:levelDescription>
+				</mcc:MD_Scope>
+			</mdq:scope>
+			<mdq:report>
+				<mdq:DQ_AbsoluteExternalPositionalAccuracy>
+					<mdq:result>
+						<mdq:DQ_QuantitativeResult>
+							<mdq:value>
+								<gco:Record>
+									<swe:Quantity definition="http://api.nsgreg.nga.mil/qual-measure/CircularMapAccuracyStd">
+										<swe:label>Absolute CE90</swe:label>
+										<swe:uom xlink:href="http://api.nsgreg.nga.mil/physical-quantity/length/metre" />
+										<swe:value>4.0000</swe:value>
+									</swe:Quantity>
+								</gco:Record>
+							</mdq:value>
+						</mdq:DQ_QuantitativeResult>
+					</mdq:result>
+				</mdq:DQ_AbsoluteExternalPositionalAccuracy>
+			</mdq:report>
+			<mdq:report>
+				<mdq:DQ_AbsoluteExternalPositionalAccuracy>
+					<mdq:result>
+						<mdq:DQ_QuantitativeResult>
+							<mdq:value>
+								<gco:Record>
+									<swe:Quantity definition="http://api.nsgreg.nga.mil/qual-measure/LinearMapAccuracy90">
+										<swe:label>Absolute LE90</swe:label>
+										<swe:uom xlink:href="http://api.nsgreg.nga.mil/physical-quantity/length/metre" />
+										<swe:value>1.8908</swe:value>
+									</swe:Quantity>
+								</gco:Record>
+							</mdq:value>
+						</mdq:DQ_QuantitativeResult>
+					</mdq:result>
+				</mdq:DQ_AbsoluteExternalPositionalAccuracy>
+			</mdq:report>
+			<mdq:report>
+				<mdq:DQ_RelativeInternalPositionalAccuracy>
+					<mdq:result>
+						<mdq:DQ_QuantitativeResult>
+							<mdq:value>
+								<gco:Record>
+									<swe:Quantity definition="http://api.nsgreg.nga.mil/qual-measure/RelativeVerticalError">
+										<swe:label>Relative LE90</swe:label>
+										<swe:uom xlink:href="http://api.nsgreg.nga.mil/physical-quantity/length/metre" />
+										<swe:value>1.2174</swe:value>
+									</swe:Quantity>
+								</gco:Record>
+							</mdq:value>
+						</mdq:DQ_QuantitativeResult>
+					</mdq:result>
+				</mdq:DQ_RelativeInternalPositionalAccuracy>
+			</mdq:report>
+			<mdq:report>
+				<mdq:DQ_CompletenessCommission>
+					<mdq:measure>
+						<mdq:DQ_MeasureReference>
+							<mdq:nameOfMeasure>
+								<gco:CharacterString>Coverage Completeness</gco:CharacterString>
+							</mdq:nameOfMeasure>
+							<mdq:measureDescription>
+								<gco:CharacterString>Percentage of posts with elevation measurements</gco:CharacterString>
+							</mdq:measureDescription>
+						</mdq:DQ_MeasureReference>
+					</mdq:measure>
+					<mdq:result>
+						<mdq:DQ_QuantitativeResult>
+							<mdq:value>
+								<gco:Record>
+									<swe:Quantity definition="undefined">
+										<swe:label>Coverage Completeness</swe:label>
+										<swe:uom xlink:href="http://api.nsgreg.nga.mil/physical-quantity/pureNumber/percent" />
+										<swe:value>100.0000</swe:value>
+									</swe:Quantity>
+								</gco:Record>
+							</mdq:value>
+						</mdq:DQ_QuantitativeResult>
+					</mdq:result>
+				</mdq:DQ_CompletenessCommission>
+			</mdq:report>
+			<mdq:report>
+				<mdq:DQ_CompletenessCommission>
+					<mdq:measure>
+						<mdq:DQ_MeasureReference>
+							<mdq:nameOfMeasure>
+								<gco:CharacterString>Control Points</gco:CharacterString>
+							</mdq:nameOfMeasure>
+							<mdq:measureDescription>
+								<gco:CharacterString>Number of Control Points used to determine the absolute and relative accuracy of the surface</gco:CharacterString>
+							</mdq:measureDescription>
+						</mdq:DQ_MeasureReference>
+					</mdq:measure>
+					<mdq:result>
+						<mdq:DQ_QuantitativeResult>
+							<mdq:value>
+								<gco:Record>
+									<swe:Quantity definition="undefined">
+										<swe:label>Control Points</swe:label>
+										<swe:uom xlink:href="http://api.nsgreg.nga.mil/physical-quantity/pureNumber/unitless" />
+										<swe:value>0</swe:value>
+									</swe:Quantity>
+								</gco:Record>
+							</mdq:value>
+						</mdq:DQ_QuantitativeResult>
+					</mdq:result>
+				</mdq:DQ_CompletenessCommission>
+			</mdq:report>
+			<mdq:report>
+				<mdq:DQ_ConceptualConsistency>
+					<mdq:measure>
+						<mdq:DQ_MeasureReference>
+							<mdq:nameOfMeasure>
+								<gco:CharacterString>Quality Inspection</gco:CharacterString>
+							</mdq:nameOfMeasure>
+							<mdq:measureDescription>
+								<gco:CharacterString>Description of the preliminary quality inspection</gco:CharacterString>
+							</mdq:measureDescription>
+						</mdq:DQ_MeasureReference>
+					</mdq:measure>
+					<mdq:result>
+						<mdq:DQ_DescriptiveResult>
+							<mdq:statement>
+								<gco:CharacterString>NGA’s Arctic Dynamic Elevation Model produces elevation content using a flexible and highly automated production system. Multiple input data sets are mosaicked into seamless and void-free products formatted to support NGA customers. The automated production system resolves many (but not all) of the anomalies present in the various input data sources. Artifacts originating in the input data sources, which are not detected by the dynamic model’s automated quality control procedures will remain in the dynamic model output.</gco:CharacterString>
+							</mdq:statement>
+						</mdq:DQ_DescriptiveResult>
+					</mdq:result>
+				</mdq:DQ_ConceptualConsistency>
+			</mdq:report>
+		</mdq:DQ_DataQuality>
+	</mdb:dataQualityInfo>
+	<mdb:resourceLineage>
+		<mrl:LI_Lineage>
+			<mrl:statement>
+				<gco:CharacterString>Pixel Coverage : PGC v3.2, 100.00000000% ; Land Coverage : PGC v3.2, 100.00000000%</gco:CharacterString>
+			</mrl:statement>
+			<mrl:source>
+				<mrl:LI_Source>
+					<mrl:description>
+						<gco:CharacterString>TERRAFORM</gco:CharacterString>
+					</mrl:description>
+					<mrl:sourceSpatialResolution>
+						<mri:MD_Resolution>
+							<mri:distance>
+								<gco:Distance uom="http://api.nsgreg.nga.mil/physical-quantity/length/metre">90</gco:Distance>
+							</mri:distance>
+						</mri:MD_Resolution>
+					</mrl:sourceSpatialResolution>
+					<mrl:sourceCitation>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>TERRAFORM</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:DateTime>2016-12-31T00:00:00Z</gco:DateTime>
+									</cit:date>
+									<cit:dateType>
+										<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="creation" />
+									</cit:dateType>
+								</cit:CI_Date>
+							</cit:date>
+							<cit:citedResponsibleParty>
+								<cit:CI_Responsibility>
+									<cit:role>
+										<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="creator" />
+									</cit:role>
+									<cit:party xlink:href="#NgaOfficeOfGeomatics" />
+								</cit:CI_Responsibility>
+							</cit:citedResponsibleParty>
+						</cit:CI_Citation>
+					</mrl:sourceCitation>
+				</mrl:LI_Source>
+			</mrl:source>
+			<mrl:source>
+				<mrl:LI_Source>
+					<mrl:description>
+						<gco:CharacterString>ArcticDEM</gco:CharacterString>
+					</mrl:description>
+					<mrl:sourceSpatialResolution>
+						<mri:MD_Resolution>
+							<mri:distance>
+								<gco:Distance uom="http://api.nsgreg.nga.mil/physical-quantity/length/metre">2</gco:Distance>
+							</mri:distance>
+						</mri:MD_Resolution>
+					</mrl:sourceSpatialResolution>
+					<mrl:sourceCitation>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>ArcticDEM</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:DateTime>2018-09-28T00:00:00Z</gco:DateTime>
+									</cit:date>
+									<cit:dateType>
+										<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="creation" />
+									</cit:dateType>
+								</cit:CI_Date>
+							</cit:date>
+							<cit:citedResponsibleParty>
+								<cit:CI_Responsibility>
+									<cit:role>
+										<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="creator" />
+									</cit:role>
+									<cit:party xlink:href="#PGC" />
+								</cit:CI_Responsibility>
+							</cit:citedResponsibleParty>
+						</cit:CI_Citation>
+					</mrl:sourceCitation>
+				</mrl:LI_Source>
+			</mrl:source>
+			<mrl:source>
+				<mrl:LI_Source>
+					<mrl:description>
+						<gco:CharacterString>Alaska Mapping Initiative</gco:CharacterString>
+					</mrl:description>
+					<mrl:sourceSpatialResolution>
+						<mri:MD_Resolution>
+							<mri:distance>
+								<gco:Distance uom="http://api.nsgreg.nga.mil/physical-quantity/length/metre">5</gco:Distance>
+							</mri:distance>
+						</mri:MD_Resolution>
+					</mrl:sourceSpatialResolution>
+					<mrl:sourceCitation>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>Alaska Mapping Initiative</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:DateTime>2018-04-26T00:00:00Z</gco:DateTime>
+									</cit:date>
+									<cit:dateType>
+										<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="creation" />
+									</cit:dateType>
+								</cit:CI_Date>
+							</cit:date>
+							<cit:citedResponsibleParty>
+								<cit:CI_Responsibility>
+									<cit:role>
+										<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="creator" />
+									</cit:role>
+									<cit:party xlink:href="#USGS" />
+								</cit:CI_Responsibility>
+							</cit:citedResponsibleParty>
+						</cit:CI_Citation>
+					</mrl:sourceCitation>
+				</mrl:LI_Source>
+			</mrl:source>
+			<mrl:source>
+				<mrl:LI_Source>
+					<mrl:description>
+						<gco:CharacterString>TREx DEM 90m</gco:CharacterString>
+					</mrl:description>
+					<mrl:sourceSpatialResolution>
+						<mri:MD_Resolution>
+							<mri:distance>
+								<gco:Distance uom="http://api.nsgreg.nga.mil/physical-quantity/length/metre">90</gco:Distance>
+							</mri:distance>
+						</mri:MD_Resolution>
+					</mrl:sourceSpatialResolution>
+					<mrl:sourceCitation>
+						<cit:CI_Citation>
+							<cit:title>
+								<gco:CharacterString>TREx DEM 90m</gco:CharacterString>
+							</cit:title>
+							<cit:date>
+								<cit:CI_Date>
+									<cit:date>
+										<gco:DateTime>2015-04-29T00:00:00Z</gco:DateTime>
+									</cit:date>
+									<cit:dateType>
+										<cit:CI_DateTypeCode codeList="http://api.nsgreg.nga.mil/codelist/DateTypeCode" codeListValue="creation" />
+									</cit:dateType>
+								</cit:CI_Date>
+							</cit:date>
+							<cit:citedResponsibleParty>
+								<cit:CI_Responsibility>
+									<cit:role>
+										<cit:CI_RoleCode codeList="http://api.nsgreg.nga.mil/codelist/RoleCode" codeListValue="creator" />
+									</cit:role>
+									<cit:party xlink:href="#BGIC" />
+									<cit:party xlink:href="#Airbus" />
+								</cit:CI_Responsibility>
+							</cit:citedResponsibleParty>
+						</cit:CI_Citation>
+					</mrl:sourceCitation>
+				</mrl:LI_Source>
+			</mrl:source>
+		</mrl:LI_Lineage>
+	</mdb:resourceLineage>
+	<mdb:metadataConstraints>
+		<nas:ResourceConstraints ism:classification="U" ism:ownerProducer="USA">
+			<nas:notice ism:noticeDate="2019-07-01" ism:unregisteredNoticeType="General Warning">
+				<ism:NoticeText ism:classification="U" ism:ownerProducer="USA">Data release may be restricted.</ism:NoticeText>
+			</nas:notice>
+		</nas:ResourceConstraints>
+	</mdb:metadataConstraints>
+</nas:MD_Metadata>

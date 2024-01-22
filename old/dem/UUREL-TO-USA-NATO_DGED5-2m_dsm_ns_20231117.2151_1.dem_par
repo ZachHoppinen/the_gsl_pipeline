@@ -1,0 +1,35 @@
+Gamma DIFF&GEO DEM/MAP parameter file
+title: UUREL-TO-USA-NATO_DGED5-2m_dsm_ns_20231117.2151_1
+DEM_projection:     UTM
+data_format:        REAL*4
+DEM_hgt_offset:          0.00000
+DEM_scale:               1.00000
+width:                1208
+nlines:                887
+corner_north:  7245784.000   m
+corner_east:    512082.000   m
+post_north:     -2.0000000   m
+post_east:       2.0000000   m
+
+ellipsoid_name: WGS 84
+ellipsoid_ra:        6378137.000   m
+ellipsoid_reciprocal_flattening:  298.2572236
+
+datum_name: WGS 84
+datum_shift_dx:              0.000   m
+datum_shift_dy:              0.000   m
+datum_shift_dz:              0.000   m
+datum_scale_m:         0.00000e+00
+datum_rotation_alpha:  0.00000e+00   arc-sec
+datum_rotation_beta:   0.00000e+00   arc-sec
+datum_rotation_gamma:  0.00000e+00   arc-sec
+datum_country_list: WGS 84
+
+projection_name: WGS 84 / UTM zone 6N
+projection_zone:                  6
+false_easting:           500000.000   m
+false_northing:               0.000   m
+projection_k0:            0.9996000
+center_longitude:      -147.0000000   decimal degrees
+center_latitude:          0.0000000   decimal degrees
+
