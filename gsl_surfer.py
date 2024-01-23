@@ -1,5 +1,4 @@
-#!/home/rdcrlzh1s/miniforge3/envs/gamma/bin/python
-
+#!/home/ubuntu/miniconda3/envs/gsl/bin/python
 import os
 import argparse
 from pathlib import Path
@@ -57,7 +56,7 @@ if __name__ == "__main__":
                     help='[Optional] NAV filepath - atlans. Will add 18 seconds if it does not have extension ".txt_plus18sec"')
 
     parser.add_argument('-w', default = False,
-                        action='store_true', help='[Optional] Should the dem be converted to WGS84?')
+                        action='store_true', help='[Optional] Should the dem be converted to WGS84? [default = False]')
     
     parser.add_argument('--error_log', metavar='error_log', type=Path, nargs = '?',
                         help='[Optional] Path to save collected errors to. Will be created.')
@@ -66,7 +65,7 @@ if __name__ == "__main__":
                         help='[Optional] Output directory filename. Will be created.')
     
     parser.add_argument('-r',  default = False,
-                        action='store_true', help='[Optional] Should existing products be reprocessed?')
+                        action='store_true', help='[Optional] Should existing products be reprocessed? [default = False]')
     
     args = parser.parse_args()
     
@@ -146,7 +145,7 @@ if __name__ == "__main__":
 
         log.info(f'Starting on raw GSL file: {raw.fp}')
             
-        pol_dict = {'R1': 'H', 'R2': 'V'}
+        pol_dict = {'R1': 'H', 'R2': 'V', 'R3': 'V'}
         raw.find_polarization(pol_dict)
         log.info(f'Polarization: {raw.pol} using dictionary: {pol_dict}')
 
@@ -227,7 +226,7 @@ if __name__ == "__main__":
             successes.append(raw.fp)
         except Exception as e:
             errors[raw.fp] = e
-            log.warn(f'Error in raw file {raw.fp}: {e}')
+            log.warning(f'Error in raw file {raw.fp}: {e}')
     
     log.info(f'Executed with {len(successes)} processed and {len(errors)} errors')
     for raw, error in errors.items():
