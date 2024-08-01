@@ -103,7 +103,7 @@ def get_dem_fp(dem_directory):
     if len(dem_pars) == 0:
         log.info(f"No .dem_par file found in {dem_dir}. Trying to find tifs to convert.")
         tif_fp = assert_one_fp(dem_dir, '.tif')
-        execute(f'dem_import {tif_fp} {tif_fp.with_suffix('.dem')} {tif_fp.with_suffix('.dem_par')}')
+        execute(f"dem_import {tif_fp} {tif_fp.with_suffix('.dem')} {tif_fp.with_suffix('.dem_par')}")
         return tif_fp.with_suffix('.dem_par')
     
     if len(dem_pars) == 1:

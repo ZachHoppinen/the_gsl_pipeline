@@ -284,7 +284,8 @@ def raw_gsl_proc(raw, raw_par, nav_data, dem_par, cplx_dir, slc_dir, geoslc, mfu
   print(f'MLI averaging window e_win: {e_win}  n_win: {n_win}')
   logf.write(f'MLI circular gaussian averaging window e_win: {e_win} n_win: {n_win}\n')
   execute(f'multi_look_geo2 {GEOSLC} {dem_par} {mlifn} {dem_par2} {e_dec} {n_dec} {e_win} {n_win} {wflg} 1 ',logf)
-  execute(f'raspwr {mlifn} {dem_width} - - 1 1 {scale} {exp} grey.cm {mlifn}.bmp', logf)   # raster image is in BMP format
+  #UPDATE 2024-08-01: changed grey.cm to Greys.cm from new gamma version
+  execute(f'raspwr {mlifn} {dem_width} - - 1 1 {scale} {exp} gray.cm {mlifn}.bmp', logf)   # raster image is in BMP format
   if dp["DEM_projection"] == "EQA":
     execute(f'mk_kml {dem_par} {mlifn}.bmp {mlifn}.kml', logf)   # create a KML file in addition to the geotiff for display with googleearth
   execute(f'data2geotiff {dem_par} {mlifn}.bmp 0 {mlifn}_geo.tif', logf)
