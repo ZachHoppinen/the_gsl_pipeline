@@ -132,17 +132,6 @@ if __name__ == "__main__":
 
         pbar.update()
 
-        if raw.fp.parent.parent.stem == '20210214':
-            continue
-    
-        # if raw.fp.parent.stem != 'albion':
-            # continue
-            
-        # if raw.fp.parent.stem in parents:
-            # continue
-        # else:
-            # parents.append(raw.fp.parent.stem)
-
         log.info(f'Starting on raw GSL file: {raw.fp}')
             
         pol_dict = {'R1': 'H', 'R2': 'V', 'R3': 'V'}
@@ -161,6 +150,23 @@ if __name__ == "__main__":
         
         raw.find_nav(nav_fp, in_dir)
         log.info(f'Using nav file {raw.nav.fp}')
+
+        def check_nav(nav_fp):
+            """
+            Sometime the nav files have duplicate times that causes a "pchip discontinuity" error
+            This function checks that nav file for duplicate times and keeps only one if they are found.
+            """
+
+            df = pd.read_csv(nav_fp, comment = '#', index_col= 0, names = ['time', 'latitude','longitude','altitude','roll','pitch','heading'])
+
+            if df.index.duplicated().sum() == 0: return nav_fp
+
+            log.warning(f'Found duplicates in navigation file {nav_fp}. Creating .clean.{nav_fp.suffix} file')
+            df.drop_duplicates().to_csv(nav_fp.with_suffix(f'.clean{nav_fp.suffix}'), header = False)
+
+            return nav_fp.with_suffix(f'.clean{nav_fp.suffix}')
+        
+        raw.nav.fp = check_nav(raw.nav.fp)
 
         try:
             raw.get_start_end(raw.nav.fp, pos)

@@ -143,3 +143,20 @@ def parse_positions(fp):
     start, end = ast.literal_eval(start.split('=')[1]), ast.literal_eval(end.split('=')[1])
 
     return start, end
+
+import py_gamma as pg
+
+def get_width(par_fp: Path):
+    """
+    get width of gamma image from par file
+    """
+    par = pg.ParFile(str(par_fp))
+    if 'range_samples' in par.par_keys:
+        width = int(par.get_dict()['range_samples'][0])
+    elif 'width' in par.par_keys:
+        width = int(par.get_dict()['width'][0])
+    elif 'range_samp_1' in par.par_keys:
+        width = int(par.get_dict()['range_samp_1'][0])
+    elif 'interferogram_width' in par.par_keys:
+        width = int(par.get_dict()['interferogram_width'][0])
+    return width
