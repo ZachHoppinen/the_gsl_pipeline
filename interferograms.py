@@ -45,3 +45,5 @@ for slc1, slc2 in combinations(SLCs, 2):
 
     pg.mk_kml(int_par, int_fp.with_suffix('.int.bmp'), int_fp.with_suffix('.int.kml'))
     pg.mk_kml(int_par, cc_fp.with_suffix('.cc.bmp'), cc_fp.with_suffix('.cc.kml'))
+
+    break
