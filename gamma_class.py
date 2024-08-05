@@ -21,7 +21,7 @@ class GammaData(ABC):
         # if we get the dem filepath just add it in
         if dem_fp:
             if dem_fp.suffix == '.tif':
-                execute(f'dem_import {dem_fp} {dem_fp.with_suffix('.dem')} {dem_fp.with_suffix('.dem_par')}')
+                execute(f"dem_import {dem_fp} {dem_fp.with_suffix('.dem')} {dem_fp.with_suffix('.dem_par')}")
                 self.dem = GammaDEM(dem_fp.with_suffix('.dem'), dem_fp.with_suffix('.dem_par'), dem_fp)
             elif dem_fp.suffix == '.dem_par':
                 self.dem = GammaDEM(dem_fp.with_suffix('.dem'), dem_fp)
@@ -58,7 +58,7 @@ class GammaData(ABC):
                 tif_fp = tifs[0]
 
                 # convert to Gamma format
-                execute(f'dem_import {tif_fp} {tif_fp.with_suffix('.dem')} {tif_fp.with_suffix('.dem_par')}')
+                execute(f"dem_import {tif_fp} {tif_fp.with_suffix('.dem')} {tif_fp.with_suffix('.dem_par')}")
 
                 # add to object
                 self.dem = GammaDEM(tif_fp.with_suffix('.dem'), tif_fp.with_suffix('.dem_par'), tif_fp)
