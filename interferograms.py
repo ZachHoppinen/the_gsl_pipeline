@@ -7,13 +7,13 @@ import py_gamma as pg
 from gs_funcs import get_width
 
 # assign names to DEM, DEM_par, shaded relief intensity image
-dem=Path("/data/wcp/dem/wcp.10m.wgs.dem")
-dem_par=Path("/data/wcp/dem/wcp.10m.wgs.dem_par")
+dem=Path("/data/wcp/dem/wcp.wgs.1m.dem")
+dem_par=Path("/data/wcp/dem/wcp.wgs.1m.dem_par")
 
 shade=dem.with_suffix('.dem.shd')
 print(shade)
 dem_width=get_width(dem_par)
-# pg.mapshd(dem, dem_width, 3, 3, '-', '-', shade, 0, 0, 1, 3, 0)
+pg.mapshd(dem, dem_width, 3, 3, '-', '-', shade, 0, 0, 1, 3, 0)
 
 main_dir = Path('/data/wcp/')
 SLCs = main_dir.rglob('*.slc')
@@ -24,7 +24,12 @@ from itertools import combinations
 int_dir = main_dir.joinpath('ints')
 int_dir.mkdir(exist_ok = True)
 
-for slc1, slc2 in combinations(SLCs, 2):
+from tqdm import tqdm
+
+for slc1, slc2 in tqdm(combinations(SLCs, 2)):
+
+    pol1, pol2 = f"{slc1.stem.split('_')[6]}{slc1.stem.split('_')[9]}", f"{slc2.stem.split('_')[6]}{slc2.stem.split('_')[9]}"
+    if pol1 != pol2: continue
 
     d1, d2 = [pd.to_datetime(f"{f.stem.split('_')[4]}T{f.stem.split('_')[5]}") for f in [slc1, slc2]]
     if d1 > d2: slc1, slc2 = slc2, slc1
@@ -32,7 +37,7 @@ for slc1, slc2 in combinations(SLCs, 2):
     d1, d2 = [pd.to_datetime(f"{f.stem.split('_')[4]}T{f.stem.split('_')[5]}") for f in [slc1, slc2]]
     mli1, mli2 = slc1.with_suffix('.mli'), slc2.with_suffix('.mli')
     
-    d1_d2_str = f"{d1.strftime('%Y-%m-%dT%H-%M')}_{d2.strftime('%Y-%m-%dT%H-%M')}"
+    d1_d2_str = f"{d1.strftime('%Y-%m-%dT%H-%M')}_{d2.strftime('%Y-%m-%dT%H-%M')}_{pol1}"
     int_fp = int_dir.joinpath(d1_d2_str).with_suffix('.int')
     cc_fp = int_dir.joinpath(d1_d2_str).with_suffix('.cc')
     int_par = int_dir.joinpath(d1_d2_str).with_suffix('.dem_par')
@@ -46,4 +51,4 @@ for slc1, slc2 in combinations(SLCs, 2):
     pg.mk_kml(int_par, int_fp.with_suffix('.int.bmp'), int_fp.with_suffix('.int.kml'))
     pg.mk_kml(int_par, cc_fp.with_suffix('.cc.bmp'), cc_fp.with_suffix('.cc.kml'))
 
-    break
+#    break
